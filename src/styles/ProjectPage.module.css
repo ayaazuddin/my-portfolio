@@ -1,0 +1,304 @@
+
+.stickyNotesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem 0;
+  justify-content: center;
+}
+
+.stickyNote {
+  width: 220px;
+  height: 240px;
+  background-color: #FFEAA7; /* Default sticky note color */
+  border-radius: 2px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Indie Flower', cursive;
+  margin-bottom: 1.5rem;
+}
+
+.stickyNote:hover {
+  transform: translateY(-5px) rotate(0deg) !important;
+  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Push pin for sticky note */
+.stickyPin {
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stickyPin::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+/* Sticky Note Content */
+.stickyTitle {
+  margin: 0.75rem 0 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  font-family: 'Kalam', cursive;
+  color: #2D3748;
+}
+
+.stickyImageWrapper {
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 2px;
+  margin: 0.25rem 0;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stickyImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stickyDescription {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #4A5568;
+  line-height: 1.2;
+  flex: 1;
+}
+
+/* Hidden sticky note when expanded */
+.stickyNoteHidden {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Expanded Project View */
+.expandedProjectOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+}
+
+.expandedProject {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  position: relative;
+  animation: fadeInScale 0.4s ease-out;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #4A5568;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.expandedProjectContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .expandedProjectContent {
+    flex-direction: row;
+  }
+}
+
+.expandedImageWrapper {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+.expandedImage {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border: 5px solid white;
+}
+
+.expandedDetails {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.expandedTitle {
+  font-size: 2rem;
+  margin: 0;
+  color: #2D3748;
+  font-family: 'Kalam', cursive;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.expandedTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: #3B82F6;
+}
+
+.expandedDescription {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #4A5568;
+  margin: 0;
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+}
+
+.expandedTechnologies {
+  margin-top: 1rem;
+}
+
+.expandedTechnologies h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.25rem;
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.techTag {
+  background-color: #DBEAFE;
+  color: #1E40AF;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-family: 'Kalam', cursive;
+  transition: all 0.2s ease;
+}
+
+.techTag:hover {
+  background-color: #93C5FD;
+  transform: translateY(-2px);
+}
+
+.expandedLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.projectLink {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background-color: #3B82F6;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: 'Kalam', cursive;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.projectLink:hover {
+  background-color: #2563EB;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Project-specific styling for colored sticky notes */
+.stickyNote[data-project="water-quality"] {
+  background-color: #C4E5F9; /* Light blue for water-related project */
+}
+
+.stickyNote[data-project="adaptai"] {
+  background-color: #FFDFC4; /* Peach for accessibility project */
+}
+
+.stickyNote[data-project="medical-texts"] {
+  background-color: #D8F5C4; /* Light green for medical project */
+}
+
+.stickyNote[data-project="fairness"] {
+  background-color: #E5D4F5; /* Light purple for fairness project */
+}
+

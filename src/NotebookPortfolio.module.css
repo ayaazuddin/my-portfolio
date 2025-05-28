@@ -1,0 +1,1041 @@
+/* NotebookPortfolio.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Indie+Flower&family=Kalam:wght@300;400;700&family=Shadows+Into+Light&display=swap');
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+  background-color: #FEF3C7; /* amber-50 equivalent */
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.portfolioWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1024px; /* 4xl equivalent */
+}
+
+.shadowPaper1 {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: rotate(1deg);
+}
+
+.shadowPaper2 {
+  position: absolute;
+  top: 1rem;
+  left: 0.75rem;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: rotate(-1deg);
+}
+
+.mainPaper {
+  position: relative;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transform: rotate(0.5deg);
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.mainPaper:hover {
+  transform: rotate(0);
+}
+
+.redMargin {
+  position: absolute;
+  left: 4rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #F87171; /* red-400 equivalent */
+}
+
+.holePunch {
+  position: absolute;
+  left: 1.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #FEF3C7; /* amber-50 equivalent */
+  border: 1px solid #D1D5DB; /* gray-300 equivalent */
+}
+
+.holePunch1 {
+  top: 25%;
+}
+
+.holePunch2 {
+  top: 50%;
+}
+
+.holePunch3 {
+  top: 75%;
+}
+
+.notebookContent {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+  min-height: 100vh;
+  padding-left: 2.5rem;
+  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #94A3B8 calc(100% - 1px));
+  background-size: 100% 2.5rem;
+  background-position: 0 1.25rem;
+  color: #1F2937;
+  font-family: 'Caveat', cursive;
+}
+
+/* Content wrapper contains and positions all content sections */
+.contentWrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Base styles for all content sections */
+.contentSection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 1.25rem;
+}
+
+.heading1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1F2937;
+  margin: 0;
+  padding: 0;
+  font-family: 'Caveat', cursive;
+  /* height: 2.5rem; */
+  /* line-height: 2.5rem; */
+}
+
+.heading2 {
+  font-size: 1.5rem;
+  color: #4B5563;
+  margin-bottom: 2rem;
+  font-family: 'Caveat', cursive;
+  /* line-height: 2.5rem; */
+}
+
+.heading3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Shadows Into Light', cursive;
+  /* height: 2.5rem; */
+  line-height: 2.55rem;
+}
+
+.heading4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1F2937;
+  font-family: 'Kalam', cursive; /* Different handwritten font */
+}
+
+
+
+.section {
+  margin-bottom: 1.6rem;
+}
+
+.paragraph {
+  color: #4B5563;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  font-family: 'Caveat', cursive;
+  /* height: 2.5rem;*/
+  line-height: 2.55rem; 
+}
+
+.paragraphTilt {
+  color: #4B5563;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  font-family: 'Caveat', cursive;
+  transform: rotate(-0.5deg);
+  /* height: 2.5rem;*/
+  line-height: 2.5rem; 
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.skillTag {
+  background-color: #DBEAFE;
+  color: #1E40AF;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-family: 'Kalam', cursive; /* Different handwritten font */
+}
+
+.skillTagEven {
+  background-color: #DBEAFE;
+  color: #1E40AF;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-family: 'Kalam', cursive; /* Different handwritten font */
+  transform: rotate(0.5deg);
+}
+
+.skillTagOdd {
+  background-color: #DBEAFE;
+  color: #1E40AF;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-family: 'Kalam', cursive; /* Different handwritten font */
+  transform: rotate(-0.5deg);
+}
+
+.jobInfo {
+  margin-bottom: 2.5rem;
+}
+
+.jobTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1F2937;
+  font-family: 'Kalam', cursive;
+  margin: 0;
+  padding: 0;
+  /* height: 2.5rem; */
+  line-height: 2.5rem;
+}
+
+.companyInfo {
+  color: #4B5563;
+  font-style: italic;
+  font-family: 'Indie Flower', cursive;
+  margin: 0;
+  padding: 0;
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+
+
+.listItem {
+  margin: 0 0 0 1.5rem;
+  color: #4B5563;
+  font-size: 1.1rem;
+  font-family: 'Indie Flower', cursive;
+  padding: 0;
+  line-height: 2.55rem;
+}
+
+.listItemTilt {
+  margin: 0 0 0 1.5rem;
+  color: #4B5563;
+  font-size: 1.1rem;
+  font-family: 'Indie Flower', cursive;
+  transform: rotate(0.3deg);
+  padding: 0;
+  line-height: 2.55rem;
+}
+
+.unorderedList {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.projectItem {
+  margin-bottom: 1rem;
+}
+
+.photoContainer {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 1rem 0;
+  padding: 1rem;
+  transform: rotate(-0.5deg);
+}
+
+.photoWrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #94A3B8;
+  border-radius: 4px;
+  padding: 4px;
+  background-color: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.photoWrapper::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 1px solid #94A3B8;
+  border-radius: 6px;
+  z-index: -1;
+}
+
+.profilePhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.nameContainer .heading1 {
+  font-size: 2.75rem;
+  transform: rotate(-0.5deg);
+  margin: 0;
+  padding: 0;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+/* .newsItem {
+  margin-bottom: 1.25rem;
+  padding: 0.5rem;
+  border-left: 2px solid #E5E7EB;
+  transition: all 0.3s ease;
+}
+
+.newsItem:hover {
+  border-left-color: #3B82F6;
+  transform: translateX(5px);
+} */
+
+/* Animations and transitions */
+.eraseAnimation {
+  animation: erase 1s ease-in-out forwards;
+}
+
+@keyframes erase {
+  0% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+  }
+}
+
+/* Content visibility states */
+.contentHidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.contentVisible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  z-index: 2;
+  position: relative;
+}
+
+/* Enhanced Sticky Notes for Research Projects */
+
+
+
+
+
+
+
+
+/* Responsive Media Queries for NotebookPortfolio.module.css */
+
+/* ===== BASE STYLES (Desktop First) ===== */
+/* Your existing styles remain as the desktop baseline */
+
+/* ===== LARGE DESKTOPS (1200px+) ===== */
+@media (min-width: 1200px) {
+  .container {
+    padding: 2rem;
+  }
+  
+  .portfolioWrapper {
+    max-width: 1200px;
+  }
+  
+  .mainPaper {
+    padding: 2.5rem;
+  }
+  
+  .heading1 {
+    font-size: 3rem;
+  }
+  
+  .nameContainer .heading1 {
+    font-size: 3.25rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
+  
+  .heading3 {
+    font-size: 2rem;
+  }
+  
+  .paragraph,
+  .paragraphTilt {
+    font-size: 1.2rem;
+  }
+  
+  .photoWrapper {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* ===== STANDARD DESKTOP (992px - 1199px) ===== */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .mainPaper {
+    padding: 2rem;
+  }
+  
+  .notebookContent {
+    padding-left: 2.5rem;
+  }
+}
+
+/* ===== TABLETS (768px - 991px) ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .shadowPaper1 {
+    top: 1rem;
+    left: 1rem;
+  }
+  
+  .shadowPaper2 {
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+  
+  .mainPaper {
+    padding: 1.5rem;
+    transform: rotate(0deg); /* Less rotation on tablets */
+  }
+  
+  .redMargin {
+    left: 3rem;
+  }
+  
+  .holePunch {
+    left: 1rem;
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  
+  .notebookContent {
+    padding-left: 2rem;
+    background-size: 100% 2rem;
+    background-position: 0 1rem;
+  }
+  
+  .heading1 {
+    font-size: 2.2rem;
+  }
+  
+  .nameContainer .heading1 {
+    font-size: 2.5rem;
+    height: 2.75rem;
+    line-height: 2.75rem;
+  }
+  
+  .heading2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .heading3 {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+  
+  .paragraph,
+  .paragraphTilt {
+    font-size: 1.05rem;
+    line-height: 2.2rem;
+  }
+  
+  .photoContainer {
+    margin: 1.5rem 0 0.75rem 0;
+  }
+  
+  .photoWrapper {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .jobInfo {
+    margin-bottom: 2rem;
+  }
+  
+  .skillTagEven,
+  .skillTagOdd,
+  .skillTag {
+    font-size: 0.95rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+/* ===== LARGE MOBILE (576px - 767px) ===== */
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    padding: 0.75rem;
+    min-height: 100vh;
+  }
+  
+  .shadowPaper1,
+  .shadowPaper2 {
+    display: none; /* Hide shadow papers on mobile for cleaner look */
+  }
+  
+  .mainPaper {
+    padding: 1.25rem;
+    transform: rotate(0deg);
+    border-radius: 0.375rem;
+  }
+  
+  .redMargin {
+    left: 2.5rem;
+  }
+  
+  .holePunch {
+    left: 0.75rem;
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+  
+  .notebookContent {
+    padding-left: 1.5rem;
+    background-size: 100% 1.8rem;
+    background-position: 0 0.9rem;
+    min-height: auto;
+  }
+  
+  .heading1 {
+    font-size: 2rem;
+  }
+  
+  .nameContainer {
+    margin-bottom: 1.5rem;
+  }
+  
+  .nameContainer .heading1 {
+    font-size: 2.25rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    transform: rotate(0deg);
+  }
+  
+  .heading2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .heading3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .heading4 {
+    font-size: 1.1rem;
+  }
+  
+  .paragraph,
+  .paragraphTilt {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  
+  .paragraphTilt {
+    transform: rotate(0deg); /* Remove tilt on mobile */
+  }
+  
+  .section {
+    margin-bottom: 1.4rem;
+  }
+  
+  .photoContainer {
+    margin: 1.25rem 0 0.5rem 0;
+    transform: rotate(0deg);
+  }
+  
+  .photoWrapper {
+    width: 150px;
+    height: 150px;
+    border-width: 1px;
+  }
+  
+  .jobInfo {
+    margin-bottom: 1.75rem;
+  }
+  
+  .jobTitle {
+    font-size: 1.15rem;
+    line-height: 2rem;
+  }
+  
+  .companyInfo {
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.95rem;
+  }
+  
+  .listItem,
+  .listItemTilt {
+    font-size: 1rem;
+    line-height: 2rem;
+    margin-left: 1.25rem;
+  }
+  
+  .listItemTilt {
+    transform: rotate(0deg);
+  }
+  
+  .skillsContainer {
+    gap: 0.4rem;
+    margin-top: 1rem;
+  }
+  
+  .skillTagEven,
+  .skillTagOdd,
+  .skillTag {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    transform: rotate(0deg); /* Remove rotations on mobile */
+  }
+}
+
+/* ===== SMALL MOBILE (480px - 575px) ===== */
+@media (min-width: 480px) and (max-width: 575px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .mainPaper {
+    padding: 1rem;
+  }
+  
+  .redMargin {
+    left: 2rem;
+  }
+  
+  .holePunch {
+    left: 0.5rem;
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  .notebookContent {
+    padding-left: 1.25rem;
+    background-size: 100% 1.6rem;
+    background-position: 0 0.8rem;
+  }
+  
+  .heading1 {
+    font-size: 1.8rem;
+  }
+  
+  .nameContainer .heading1 {
+    font-size: 2rem;
+    height: 2.25rem;
+    line-height: 2.25rem;
+  }
+  
+  .heading2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .heading3 {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  
+  .heading4 {
+    font-size: 1rem;
+  }
+  
+  .paragraph,
+  .paragraphTilt {
+    font-size: 0.95rem;
+    line-height: 1.8rem;
+  }
+  
+  .photoWrapper {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .jobTitle {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+  
+  .companyInfo {
+    height: 1.8rem;
+    line-height: 1.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .listItem,
+  .listItemTilt {
+    font-size: 0.95rem;
+    line-height: 1.8rem;
+    margin-left: 1rem;
+  }
+  
+  .skillTagEven,
+  .skillTagOdd,
+  .skillTag {
+    font-size: 0.85rem;
+    padding: 0.15rem 0.45rem;
+  }
+}
+
+/* ===== EXTRA SMALL MOBILE (320px - 479px) ===== */
+@media (min-width: 320px) and (max-width: 479px) {
+  .container {
+    padding: 0.375rem;
+  }
+  
+  .mainPaper {
+    padding: 0.875rem;
+    border-radius: 0.25rem;
+  }
+  
+  .redMargin {
+    left: 1.75rem;
+  }
+  
+  .holePunch {
+    left: 0.375rem;
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+  
+  .notebookContent {
+    padding-left: 1rem;
+    background-size: 100% 1.4rem;
+    background-position: 0 0.7rem;
+  }
+  
+  .heading1 {
+    font-size: 1.6rem;
+  }
+  
+  .nameContainer {
+    margin-bottom: 1rem;
+  }
+  
+  .nameContainer .heading1 {
+    font-size: 1.85rem;
+    height: 2rem;
+    line-height: 2rem;
+  }
+  
+  .heading2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.875rem;
+  }
+  
+  .heading3 {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+  
+  .heading4 {
+    font-size: 0.95rem;
+  }
+  
+  .paragraph,
+  .paragraphTilt {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
+  
+  .section {
+    margin-bottom: 1.2rem;
+  }
+  
+  .photoContainer {
+    margin: 1rem 0 0.375rem 0;
+  }
+  
+  .photoWrapper {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .jobInfo {
+    margin-bottom: 1.5rem;
+  }
+  
+  .jobTitle {
+    font-size: 1.05rem;
+    line-height: 1.6rem;
+  }
+  
+  .companyInfo {
+    height: 1.6rem;
+    line-height: 1.6rem;
+    font-size: 0.85rem;
+  }
+  
+  .listItem,
+  .listItemTilt {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    margin-left: 0.875rem;
+  }
+  
+  .skillsContainer {
+    gap: 0.3rem;
+    margin-top: 0.875rem;
+  }
+  
+  .skillTagEven,
+  .skillTagOdd,
+  .skillTag {
+    font-size: 0.8rem;
+    padding: 0.125rem 0.375rem;
+  }
+}
+
+/* ===== ULTRA SMALL SCREENS (below 320px) ===== */
+@media (max-width: 319px) {
+  .container {
+    padding: 0.25rem;
+  }
+  
+  .mainPaper {
+    padding: 0.75rem;
+  }
+  
+  .redMargin {
+    left: 1.5rem;
+  }
+  
+  .holePunch {
+    display: none; /* Hide hole punches on very small screens */
+  }
+  
+  .notebookContent {
+    padding-left: 0.875rem;
+    background-size: 100% 1.2rem;
+    background-position: 0 0.6rem;
+  }
+  
+  .heading1 {
+    font-size: 1.4rem;
+  }
+  
+  .nameContainer .heading1 {
+    font-size: 1.7rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+  }
+  
+  .heading2 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .heading3 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  
+  .paragraph,
+  .paragraphTilt {
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+  }
+  
+  .photoWrapper {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .jobTitle {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+  
+  .companyInfo {
+    height: 1.4rem;
+    line-height: 1.4rem;
+    font-size: 0.8rem;
+  }
+  
+  .listItem,
+  .listItemTilt {
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+    margin-left: 0.75rem;
+  }
+  
+  .skillTagEven,
+  .skillTagOdd,
+  .skillTag {
+    font-size: 0.75rem;
+    padding: 0.1rem 0.3rem;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION ===== */
+@media (max-width: 767px) and (orientation: landscape) {
+  .container {
+    min-height: 100vh;
+    padding: 0.5rem;
+  }
+  
+  .mainPaper {
+    padding: 1rem;
+  }
+  
+  .photoContainer {
+    margin: 0.75rem 0 0.375rem 0;
+  }
+  
+  .photoWrapper {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .nameContainer {
+    margin-bottom: 0.75rem;
+  }
+  
+  .nameContainer .heading1 {
+    font-size: 1.5rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+  }
+  
+  .section {
+    margin-bottom: 1rem;
+  }
+  
+  .jobInfo {
+    margin-bottom: 1.25rem;
+  }
+  
+  .notebookContent {
+    background-size: 100% 1.2rem;
+    background-position: 0 0.6rem;
+  }
+  
+  .paragraph,
+  .paragraphTilt {
+    line-height: 1.4rem;
+  }
+}
+
+/* ===== HIGH DPI DISPLAYS ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .photoWrapper {
+    border-width: 1px;
+  }
+  
+  .mainPaper {
+    box-shadow: 0 8px 12px -2px rgba(0, 0, 0, 0.08);
+  }
+  
+  .shadowPaper1,
+  .shadowPaper2 {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .container {
+    background-color: white;
+    padding: 0;
+  }
+  
+  .shadowPaper1,
+  .shadowPaper2 {
+    display: none;
+  }
+  
+  .mainPaper {
+    transform: rotate(0deg);
+    box-shadow: none;
+    padding: 1rem;
+  }
+  
+  .notebookContent {
+    background-image: none;
+    padding-left: 1rem;
+  }
+  
+  .redMargin,
+  .holePunch {
+    display: none;
+  }
+  
+  .photoContainer {
+    transform: rotate(0deg);
+  }
+  
+  .paragraphTilt,
+  .listItemTilt,
+  .skillTagEven,
+  .skillTagOdd {
+    transform: rotate(0deg);
+  }
+}
