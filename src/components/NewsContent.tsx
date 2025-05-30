@@ -2,11 +2,10 @@ import React from 'react';
 import styles from '../NotebookPortfolio.module.css';
 
 interface NewsContentProps {
-  isErasing: boolean;
   className: string;
 }
 
-const NewsContent: React.FC<NewsContentProps> = ({ isErasing, className }) => {
+const NewsContent: React.FC<NewsContentProps> = ({ className }) => {
   return (
     <div className={className}>
       <div className={styles.section}>

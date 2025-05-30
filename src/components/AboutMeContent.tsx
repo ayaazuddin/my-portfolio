@@ -2,13 +2,12 @@ import React from 'react';
 import styles from '../NotebookPortfolio.module.css';
 
 interface AboutMeContentProps {
-  isErasing: boolean;
   className: string;
 }
 
 
 
-const AboutMeContent: React.FC<AboutMeContentProps> = ({ isErasing, className }) => {
+const AboutMeContent: React.FC<AboutMeContentProps> = ({ className }) => {
   const skills = ['Python', 'PyTorch', 'React.js', 'JavaScript', 'HTML/CSS', 'Flask', 'Docker', 'PostgreSQL', 'TensorFlow', 'scikit-learn'];
   
   return (

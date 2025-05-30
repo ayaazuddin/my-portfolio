@@ -2,11 +2,10 @@ import React from 'react';
 import styles from '../NotebookPortfolio.module.css';
 
 interface ResumeContentProps {
-  isErasing: boolean;
   className: string;
 }
 
-const ResumeContent: React.FC<ResumeContentProps> = ({ isErasing, className }) => {
+const ResumeContent: React.FC<ResumeContentProps> = ({ className }) => {
   // You'll need to place your resume PDF in the public folder
   const resumeUrl = '/resume.pdf'; // Place your resume.pdf file in the public folder
 

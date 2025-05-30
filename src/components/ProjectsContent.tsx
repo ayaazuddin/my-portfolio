@@ -13,11 +13,10 @@ interface Project {
 }
 
 interface ProjectsContentProps {
-  isErasing: boolean;
   className: string;
 }
 
-const ProjectsContent: React.FC<ProjectsContentProps> = ({ isErasing, className }) => {
+const ProjectsContent: React.FC<ProjectsContentProps> = ({ className }) => {
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
   
   // Project data based on your resume

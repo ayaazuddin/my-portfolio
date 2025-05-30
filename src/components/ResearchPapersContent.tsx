@@ -17,11 +17,10 @@ interface Paper {
 }
 
 interface ResearchPapersJournalProps {
-  isErasing: boolean;
   className: string;
 }
 
-const ResearchPapersContent: React.FC<ResearchPapersJournalProps> = ({ isErasing, className }) => {
+const ResearchPapersContent: React.FC<ResearchPapersJournalProps> = ({ className }) => {
   // Sample research papers data - replace with your own papers
   const papers: Paper[] = [
     {

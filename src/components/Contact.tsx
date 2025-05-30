@@ -3,13 +3,12 @@ import styles from '../styles/Contact.module.css';
 
 
 interface ContactProps {
-  isErasing: boolean;
   className: string;
 }
 
 
 // Component for the polaroid-style social links section
-const PolaroidSocialLinks: React.FC<ContactProps> = ({isErasing, className }) => {
+const PolaroidSocialLinks: React.FC<ContactProps> = ({className }) => {
   return (
     <div className={className}>
       <div className={styles.polaroidContainer}>

@@ -22,7 +22,7 @@ const NotebookPortfolio: React.FC = () => {
   };
 
   const handleResumeClick = () => {
-  window.open('/resume.pdf', '_blank');
+  window.open('./resume.pdf', '_blank');
 };
 
   return (
@@ -91,14 +91,12 @@ const NotebookPortfolio: React.FC = () => {
               {/* Render different content components based on currentView */}
               {currentView === 'main' && (
                 <AboutMeContent
-                  isErasing={isErasing}
                   className={`${styles.contentSection} ${isErasing ? styles.eraseAnimation : ''} ${currentView === 'main' ? styles.contentVisible : styles.contentHidden}`}
                 />
               )}
 
               {currentView === 'projects' && (
                 <ProjectsContent
-                  isErasing={isErasing}
                   className={`${styles.contentSection} ${isErasing ? styles.eraseAnimation : ''} ${currentView === 'projects' ? styles.contentVisible : styles.contentHidden}`}
                 />
               )}
@@ -106,7 +104,7 @@ const NotebookPortfolio: React.FC = () => {
               {/* Research Papers Content */}
               {currentView === 'research' && (
                 <ResearchPapersContent
-                  isErasing={isErasing}
+                  
                   className={`${styles.contentSection} ${isErasing ? styles.eraseAnimation : ''} ${currentView === 'research' ? styles.contentVisible : styles.contentHidden}`}
                 />
               )}
@@ -114,7 +112,7 @@ const NotebookPortfolio: React.FC = () => {
               {/* Contact Content */}
               {currentView === 'contact' && (
                 <PolaroidSocialLinks
-                  isErasing={isErasing}
+                  
                   className={`${styles.contentSection} ${isErasing ? styles.eraseAnimation : ''} ${currentView === 'contact' ? styles.contentVisible : styles.contentHidden}`}
                 />
               )}
