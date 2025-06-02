@@ -87,7 +87,7 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ className }) => {
     },
     {
       id: 'twitter-depression-detection',
-      title: 'SAIN: Twitter Depression Detection System',
+      title: 'Twitter Depression Detection System',
       shortDescription: 'Sentiment analysis system to identify people facing depression through Twitter data',
       fullDescription: 'Developed a comprehensive sentiment analysis system using Twitter data to identify users showing signs of depression through their social media activity. Implemented natural language processing techniques to analyze tweet content, linguistic patterns, and emotional indicators associated with depressive symptoms. Built machine learning models to classify tweets based on sentiment polarity and depression-indicative language patterns. Utilized Twitter API for real-time data collection and preprocessing pipelines for text cleaning, tokenization, and feature extraction. Applied various classification algorithms including logistic regression, SVM, and deep learning models to achieve accurate depression detection. Integrated lexicon-based approaches with machine learning techniques for enhanced sentiment classification. System designed to provide early intervention opportunities for mental health support by identifying at-risk users through their social media expressions.',
       technologies: ['Python', 'Natural Language Processing', 'Twitter API', 'Sentiment Analysis', 'Machine Learning', 'Text Mining', 'NLTK', 'Scikit-learn', 'Data Analysis', 'Mental Health Technology'],
